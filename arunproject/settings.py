@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-n0b7dzpxuibqme191+ou0b8g%itbcf4rypdi-9w*8n2((pr7gx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['8000-arunvg1963-djangovlog-tu7wpwlagwc.ws.codeinstitute-ide.net',]
+
 
 
 # Application definition
@@ -37,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'vlog'
+    
 ]
 
 MIDDLEWARE = [
