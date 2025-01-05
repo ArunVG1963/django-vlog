@@ -102,4 +102,8 @@ This website is deployed to Heroku from a GitHub repository, the following steps
 - Once it has been connected scroll down to the **Manual Deploy** and click **Deploy branch** when it has deployed you will see a **view app** button below and this will bring you to your newly deployed app.
 - Please note that when deploying manually you will have to deploy after each change you make to your repository.
 ## Credits
+<<<<<<< HEAD
 List of used resources for your website (text, images, snippets of code, projects....)
+=======
+List of used resources for your website (text, images, snippets of code, projects....)
+>>>>>>> 59d354e (second commit for new camera.html)
