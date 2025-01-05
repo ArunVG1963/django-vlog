@@ -19,7 +19,9 @@ from django.urls import path, include
 from vlog import views as views_vlog
 
 urlpatterns = [
-    path('vlog/', views_vlog.my_vlog, name='vlog'),
+    path('', views_vlog.main, name='main'),
+    path('vlog', views_vlog.upload_media, name='vlog'),
     path('admin/', admin.site.urls),
+    path('camera', views_vlog.camera, name='camera'),
     
 ]
