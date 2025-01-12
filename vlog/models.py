@@ -7,7 +7,7 @@ class Video(models.Model):
     """
     Model for a video.
     """
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, unique=True)
     description = models.TextField()
     video_file = models.FileField(upload_to='videos/')
     created_at = models.DateTimeField(auto_now_add=True)
