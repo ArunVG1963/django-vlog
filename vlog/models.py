@@ -13,9 +13,12 @@ class Video(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='videos')
-
+    
+    class Meta:
+        ordering = ["-created_at"]
+    
     def __str__(self):
-        return self.title
+        return f"{self.title} | written by {self.user}"
 
 class Comment(models.Model):
     """
