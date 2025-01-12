@@ -12,7 +12,7 @@ def register(request):
             user = form.save()
             login(request, user)
             messages.success(request, "Registration successful. Welcome!")
-            return redirect('home')
+            return redirect('main')
         else:
             messages.error(request, "Registration failed. Please check the form for errors.")
     else:
