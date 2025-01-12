@@ -29,7 +29,9 @@ class Comment(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     video = models.ForeignKey(Video, on_delete=models.CASCADE, related_name='comments')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments')
+    class Meta:
+        ordering = ["created_at"]
 
     def __str__(self):
-        return f"{self.user.username} - {self.video.title}"
+        return f"{self.user.username} - {self.video.title} - {self.create_at} - {self.updated_at}"
 
