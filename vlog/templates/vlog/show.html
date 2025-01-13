@@ -50,11 +50,11 @@
                 <td>{{video.created_at}}</td>
                 <td>{{video.video_file}}</td>
                 <td>
-                    <a href="{% url 'edit_video'}/{{video.pk}}">Update</a>
+                    <a href="{% url 'edit_video' video.pk %}">Update</a>
                 </td>
                 
                 <td>
-                    <a href="remove/{{video.pk}}">Delete</a>
+                    <a href="{% url 'remove_video' video.pk %}">Delete</a>
                 </td>
             </tr>
             {% endfor %}

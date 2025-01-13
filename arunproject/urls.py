@@ -30,8 +30,8 @@ urlpatterns = [
     path('video-entry/',views_vlog.video_entry, name='video_entry'),
     path('process-video-entry/',views_vlog.process_video_entry, name='process_video_entry'),
     path('show/',views_vlog.video_list, name="video_list"),
-    path('edit/',views_vlog.edit_video,name="edit_video"),
-    path('delete/',views_vlog.remove_video,name="remove_video")
+    path('edit/<str:pk>/',views_vlog.edit_video,name="edit_video"),
+    path('delete/<str:pk>/',views_vlog.remove_video,name="remove_video")
 
 ]
 

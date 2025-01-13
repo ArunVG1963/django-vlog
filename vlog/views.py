@@ -74,9 +74,9 @@ def edit_video(request,pk):
             print(request.POST)
             videos.title = request.POST['title']
             videos.description = request.POST['description']
-            videos.file = request.POST['video_file']
+            videos.video_file = request.POST['video_file']
             videos.save()   
-            return redirect('/show')
+            return redirect('video_list')
     context = {
         'videos': videos,
     }
@@ -88,7 +88,7 @@ def remove_video(request, pk):
    
    if request.method == 'POST':
        videos.delete()
-       return redirect('/show')
+       return redirect('video_list')
 
    context = {
         'videos': videos,
