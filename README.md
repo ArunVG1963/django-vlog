@@ -11,6 +11,7 @@ The project was also used to experiment with bootstrap grid, and other html tech
 WARNING - This project is a WORK IN PROGRESS AS MUCH OF THE FUNCTIONALITY HAS NOT WORKED DUE TO TIME CONSTRAINTS
 THE CRUD is in development
 
+Please Note that the Camera App is used to record your personal video file which is intended to be downloaded and saved to a cloudinary database. Due to time constraints this is pending development.
 
 ### Purpose
 This project is to provide users with an html and css website that provides information and content to support persons with resources and support for their mental health.
@@ -113,22 +114,20 @@ This has been frustrating as the position of cards has been affected by the boot
 
 The height and width of cards has not been easily managed.
 
-As part of utilising the grid layout from bootstrap in Tips webpage, i.e the readmore.html, this has ensured that cards are splayed correctly in the center of the viewport.
-
 Testing of buttons on cards has worked as expected. Only the home button has been setup to link back to index.html
 
 Using chrome dev tools, divs and elements were examined. An error with favicons link appeared intermittently. This will be examined
 
 ### Validation
-W3C html validation was undertaken on index.html, getinvolved.html, and readmore.html
+W3C html validation was undertaken on index.html, show.html, and edit.html and delete.html pages
+
 Warnings but no errors detected.
 W3C CSS validation was undertaken with iterative correction of typos and properties for fonts that do not exist removed.
 
 ## Deployment
 
 ### Deployment Process
-Briefly describe the deployment process to GitHub Pages or another cloud platform.  
-Mention any specific challenges encountered during deployment.  
+Deployment to Heroku is pending
 
 
 ## Reflection on Development Process
