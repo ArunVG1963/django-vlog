@@ -1,109 +1,190 @@
 ## Table Of Contents:
-1. [Design & Planning](#design-&-planning)
-    * [User Stories](#user-stories)
-    * [Wireframes](#wireframes)
-    * [Agile Methodology](#agile-methodology)
-    * [Typography](#typography)
-    * [Colour Scheme](#colour-scheme)
-    * [Database Diagram](#database-diagram)
-    
-2. [Features](#features)
-    * [Navigation](#Navigation)
-    * [Footer](#Footer)
-    * [Home page](#Home-page)
-    * [add your pages](#)
-    * [CRUD](#CRUD)
-    * [Login page](#Profile-page)
-    * [Authentication & Authorisation](#Authentication-Authorisation )
+1. # Mental Health Awareness
 
-3. [Technologies Used](#technologies-used)
-4. [Libraries](#libraries-used)
-5. [Testing](#testing)
-6. [Bugs](#bugs)
-7. [Deployment](#deployment)
-8. [Credits](#credits)
+## Overview
+Produce a Webpage(s) to assist users with mental health awareness. The design philosophy is that many users rely on their mobile devices to access content
+and in order to make access to content. Links to external resources have been checked, to ensure they can be utilised.
+The main philosphy behind the website is KIS - Keep it Simple. 
 
-## Design & Planning:
+The project was also used to experiment with bootstrap grid, and other html technology using Django as a framework to explore CRUD functionality
 
-### User Stories
-Write your user stories in this section
+WARNING - This project is a WORK IN PROGRESS AS MUCH OF THE FUNCTIONALITY HAS NOT WORKED DUE TO TIME CONSTRAINTS
+THE CRUD is in development
+
+
+### Purpose
+This project is to provide users with an html and css website that provides information and content to support persons with resources and support for their mental health.
+
+### Target Audience
+The audience it is designed for is for those with mild mental health issues, it is intended for persons of adult 18 and over. However it can be used by children 13+ who 
+are Gillick competent to make their own decisions.
+
+
+The primary objective for this website is to provide resources for service users to make informed decisions.
+
+## User Stories
+
+### Must-Have User Stories
+- **User Story 1:** Large font and easy read access
+  **Acceptance Criteria:** Large and easy read font
+- **User Story 2:** Access to further information and pdfs
+  **Acceptance Criteria:** Access to further information for mental health awareness
+
+(Include all prioritized must-have features)  
+- Easy to the eye colours
+- Simple navigation
+- Big Icons
+
+
+### Should-Have User Stories
+- **User Story 1:** Should have large welcoming area, user knows where he is, use of logos
+  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
+- **User Story 2:** Large formatted buttons with logo and text  
+  **Acceptance Criteria:** User can access buttons easily with logo and text
+
+(Include all prioritized should-have features)  
+In order to enhance the functionality, there may be an opportunity to include all pdf's via a carousel, with pdf's downloaded to site or updated from a database store
+
+### Could-Have User Stories
+- **User Story 1:** Direct video contact with samaritans or counsellor.  
+  **Acceptance Criteria:** Button to automatically send details from a form to an AI enhanced counsellor - working correctly from all media devices.
+- **User Story 2:** A button to access a two way video link and conversation.
+  **Acceptance Criteria:** Working and tested link to a support counsellor.
+
+(Include any could-have features considered for future enhancements)  
+**Guidance:** Document any optional features that are nice to have but not essential.
+
+## Design Decisions
+The main design consideration was KIS - Keeping the interface simple. Too much information on a page can be distracting and navigation for someone who may require mental health assistance 
+could leave the user wondering where and what to press.
+
+Using bootstrap as recommended simplifies the need for complex css styles.
+
+Using Roboto, Exo and handwriting scripts from google fonts allows for standardised text easy on the eye.
+
+Using a neutal colour and applying gradient fill should soothe the eye. The use of red was verging on pink is to slowly stimulate the user.
+
+Psychological studies also indicate light blue to be a calming colour.
+
+There is also the need to assist people who may require assistance with English, and using google translate gives an option to support users usually excluded.
+
 ### Wireframes
-Attach wireframes in this section
-### Agile Methodology
-Explain your agile approach to your project and insert screenshoots of your Kanban board (itterations, user stories, tasks,acceptance criteria, labels, story points...)
-### Typography
-Explain font you've used for your project
-### Colour Scheme
-Screenshoot of the colour scheme for your project
-### DataBase Diagram
-Image of the database diagram for your project, you can name your database models as well and how they are connected
+  ![Image of main page](image.png)
 
-## Features:
-Explain your features on the website,(navigation, pages, links, forms, input fields, CRUD....)
-### Navigation
-### Footer
-### Home-page
-### CRUD
-### Profile-page
-### Authentication-Authorisation 
-## Technologies Used
-List of technologies used for your project
-## Testing
-Important part of your README!!!
-### Google's Lighthouse Performance
-Screenshots of certain pages and scores (mobile and desktop)
-### Browser Compatibility
-Check compatability with different browsers
-### Responsiveness
-Screenshots of the responsivness, pick few devices
-### Code Validation
-Validate your code HTML, CSS, JS & Python (all pages/files need to be validated!!!), display screenshots
-### Manual Testing user stories
-Test all your user stories, you an create table 
-User Story |  Test | Pass
---- | --- | :---:
-paste here you user story | what is visible to the user and what action they should perform | &check;
-attach screenshot
-### Manual Testing features
-Test all your features, you can use the same approach 
-| Feature | Action | Status | 
-|:-------:|:--------| :--------|
-| description | user steps | &check; |
-attach screenshot
+![ Image of Tips ](image-3.png)
 
-## Bugs
-List of bugs and how did you fix them
+  ![Image of main page on mobile device](image-1.png)
+
+  ![Image of quotes pages on mobile device ](image-2.png)
+
+  
+### Accessibility Considerations
+ 
+In order to make the design accessible for all users, large jumbotron from bootstrap is used with a calming image.
+The website is designed to provide information on Mental awareness, inspirational quotes and also links for further assistance.
+
+It is not meant to replace fundamental need for trained psychological help. Links to the NHS mental help website is provided
+
+Using large ICONS should be able to direct users to content for Mental health awareness/
+
+## Features Implementation
+
+### Core Features (Must-Haves)
+- **Feature 1:** Easy to use buttons - in Blue in Card and Jumbotron
+- **Feature 2:** Navigation to webpages
+
+(Include all must-have features)  
+The launch of meditation music to assist users with controls whilst reading inspirational quotes
+
+
+### Advanced Features (Should-Haves)
+- **Feature 1:** Link to Human samaritans telephone (if using a mobile phone)
+- **Feature 2:** Chat  link to an AI chat mental support-bot.
+
+### Optional Features (Could-Haves)
+- **Feature 1:** Video link to a practitioner or emergency contact
+- **Feature 2:** Link to emergency services, 111 or 999 for emergencies.
+
+## Testing and Validation
+
+### Testing Results
+The webpage works on most devices. The bootstrap cards have an issue with a left margin, 
+This has been frustrating as the position of cards has been affected by the bootstrap containers and card class.
+
+The height and width of cards has not been easily managed.
+
+As part of utilising the grid layout from bootstrap in Tips webpage, i.e the readmore.html, this has ensured that cards are splayed correctly in the center of the viewport.
+
+Testing of buttons on cards has worked as expected. Only the home button has been setup to link back to index.html
+
+Using chrome dev tools, divs and elements were examined. An error with favicons link appeared intermittently. This will be examined
+
+### Validation
+W3C html validation was undertaken on index.html, getinvolved.html, and readmore.html
+Warnings but no errors detected.
+W3C CSS validation was undertaken with iterative correction of typos and properties for fonts that do not exist removed.
 
 ## Deployment
-This website is deployed to Heroku from a GitHub repository, the following steps were taken:
 
-#### Creating Repository on GitHub
-- First make sure you are signed into [Github](https://github.com/) and go to the code institutes template, which can be found [here](https://github.com/Code-Institute-Org/gitpod-full-template).
-- Then click on **use this template** and select **Create a new repository** from the drop-down. Enter the name for the repository and click **Create repository from template**.
-- Once the repository was created, I clicked the green **gitpod** button to create a workspace in gitpod so that I could write the code for the site.
+### Deployment Process
+Briefly describe the deployment process to GitHub Pages or another cloud platform.  
+Mention any specific challenges encountered during deployment.  
 
-#### Creating an app on Heroku
-- After creating the repository on GitHub, head over to [heroku](https://www.heroku.com/) and sign in.
-- On the home page, click **New** and **Create new app** from the drop down.
-- Give the app a name(this must be unique) and select a **region** I chose **Europe** as I am in Europe, Then click **Create app**.
 
-#### Create a database 
-- Log into [CIdatabase maker](https://www.heroku.com/](https://dbs.ci-dbs.net/))
-- add your email address in input field and submit the form
-- open database link in your email
-- paste dabase URL in your DATABASE_URL variable in env.py file and in Heroku config vars
+## Reflection on Development Process
+The development process ideation took longer than expected. 
+As this was a first project - UX phases of 
 
-#### Deploying to Heroku.
-- Head back over to [heroku](https://www.heroku.com/) and click on your **app** and then go to the **Settings tab**
-- On the **settings page** scroll down to the **config vars** section and enter the **DATABASE_URL** which you will set equal to the elephantSQL URL, create **Secret key** this can be anything,
-**CLOUDINARY_URL** this will be set to your cloudinary url and finally **Port** which will be set to 8000.
-- Then scroll to the top and go to the **deploy tab** and go down to the **Deployment method** section and select **Github** and then sign into your account.
-- Below that in the **search for a repository to connect to** search box enter the name of your repository that you created on **GitHub** and click **connect**
-- Once it has been connected scroll down to the **Manual Deploy** and click **Deploy branch** when it has deployed you will see a **view app** button below and this will bring you to your newly deployed app.
-- Please note that when deploying manually you will have to deploy after each change you make to your repository.
-## Credits
-<<<<<<< HEAD
-List of used resources for your website (text, images, snippets of code, projects....)
-=======
-List of used resources for your website (text, images, snippets of code, projects....)
->>>>>>> 59d354e (second commit for new camera.html)
+Strategy - Provide a web page / design simple to navigate and use. The rationale is to provide a positive user experience for mental health awareness. This should take approx 14 hours to complete and is within the scope of expertise for coding in html and css. To reduce too many css classes and ids, Bootstrap ver 4 will be used to assist.
+Scope - Simple three pages with content to support mental health awareness with tips and quotes
+Structure - As per wireframes design. It is to establish a clear context for the creation of the webpage design
+Skeleton - Navigation, colours to elicit an emotional response for the site. The background image for the site is universal and dark colours may not enhance a positive outcome
+Surface - This is the actual prototype for user expectations. 
+
+### Final Thoughts
+The use of bootstrap was to assist with the development of standardised simple interface for end users. 
+Complex information on a webpage can be quite duanting and remove the effect of information and support
+
+Using a simple design from Love Running, and Rosie recruitment page has ensured that KISS principles have been adhered to.
+
+## Bugs found during testing
+
+As part of the validation process, the cards on certain smaller devices do not centre. This could be due to the @media screen and min-width. There is also a left margin that may require tweaking
+the encapsulation by a div element did not offer a solution and this could be due to the ideosyncracy of Bootstrap.
+
+## Future Improvements
+As per the could have cases, the accessibility of AI bots to provide support for the end user, and a background automatic carousel of calming pictures which the user could customise depending on his profile and cookies would provide a personalised encounter.
+
+As part of the future technology, a picture from a mobile device could be taken and passed to an analyser to assess your para-verbal and facial ticks to get a plan created to support mental health and direct to the user to appropriate content.
+
+If the user is an auditory type of person, the application should direct to appropriate auditory web resources.
+
+## Resources
+https://www.mentalhealth.org.uk/get-involved/mental-health-image-library
+### Copilot assistance to create barebones containers for bootstrap
+
+### Website referred to
+https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
+
+# Credits
+
+### Design from 
+
+Codeinstitute Loverunning and Rosie Odenkirk
+### Images used from 
+https://www.rawpixel.com/search/old%20paper%20texture?page=1&path=_topics&sort=curated
+Pexels
+
+### Music 
+Youtube.com (public domain)
+
+### pdf
+Birmingham Mental Health and Wellbeing serminar
+
+### Thanks
+Matt Edwards for assistance with github deployment issues.
+### Ensure backward compatibility of components bootstrap of different versions were used.
+https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
+https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css
+https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1

@@ -33,5 +33,5 @@ class Comment(models.Model):
         ordering = ["created_at"]
 
     def __str__(self):
-        return f"{self.user.username} - {self.video.title} - {self.create_at} - {self.updated_at}"
+        return f"{self.user.username} - {self.video.title} - created on : {self.created_at} and updated : {self.updated_at}"
 

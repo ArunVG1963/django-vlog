@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- index.html content starts here -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Health Awareness</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
+    type="text/css" />
+  <link rel="stylesheet" href="{static/css/style.css}">
+
+</head>
+
+<body>
+  <!-- Header section with Nav Bar menu from Bootstrap -->
+    <!-- Main body of html -->
+  <main>
+    <!-- Jumbotron act as a guide to let user know mental health matters -->
+    <div class="jumbotron text-center consistent-background consistent-image white-text">
+      <!-- Mental Health Matters with link to pdf from Birmingham City Council Webinar -->
+      <h1 class="display-4"><img id="logo" src="assets/images/istockphoto-1405835109-612x612.jpg"> Mental Health
+        Matters</h1>
+      <p class="lead">Raising awareness and providing resources for mental well-being</p>
+      <a class="btn btn-primary btn-lg" href="assets/pdf/Mental_Health___community_champions__AF_.pdf" target="_blank"
+        role="button"> <i class="fa fa-leanpub fa-3x" aria-hidden="true"></i>
+        Learn More</a>
+    </div>
+
+    <div class="main-container">
+      
+      
+      <!-- Three Cards created for main page content KISS -->
+      <div class="container text-center text-black">
+        <div class="row">
+          <div class="col-md-4 d-flex align-items-stretch">
+            <!-- Tips about mental health -->
+            <div class="card mb-4 shadow-sm consistent-background text-black">
+              <div class="card-body">
+                <h5 class="card-title">Understanding Mental Health</h5>
+                <p class="card-text text-black">Video record entry</p>
+                <br>
+              <a href="{% url 'video_entry' %}" class="btn btn-primary"><i class="fa fa-video fa-3x" aria-hidden="true"></i> Video Save</a>
+              </div>
+            </div>
+          </div>
+          <!-- Redirection link to NHS Mental health  Support services -->
+          <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card mb-4 shadow-sm consistent-background ">
+              <div class="card-body text-black">
+                <h5 class="card-title">Support Resources</h5>
+                <p class="card-text text-black" >Find support resources and helplines available for you.</p>
+                <a href="https://www.nhs.uk/mental-health/" target="_blank" class="btn btn-primary"><i
+                    class="fa fa-medkit fa-3x" aria-hidden="true"></i> Discover</a>
+              </div>
+            </div>
+          </div>
+          <!-- Link to quotes page KISS and abstraction -->
+          <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card mb-4 shadow-sm consistent-background text-black">
+              <div class="card-body">
+                <h5 class="card-title">Inspire Me</h5>
+                <p class="card-text text-black">Quotes for our mental journey</p><br>
+                <a href="getinvolved.html" class="btn btn-primary"> <i class="fa fa-comment fa-3x"
+                    aria-hidden="true"></i> Get Quotes</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </main>
+</body>
+<!-- index.html content ends here -->
+{% endblock %}
