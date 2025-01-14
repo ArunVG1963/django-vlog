@@ -9,7 +9,7 @@ The main philosphy behind the website is KIS - Keep it Simple.
 The project was also used to experiment with bootstrap grid, and other html technology using Django as a framework to explore CRUD functionality
 
 WARNING - This project is a WORK IN PROGRESS AS MUCH OF THE FUNCTIONALITY HAS NOT WORKED DUE TO TIME CONSTRAINTS
-THE CRUD is in development
+THE CRUD is in development and looking for storing video files on cloudinary server.
 
 Please Note that the Camera App is used to record your personal video file which is intended to be downloaded and saved to a cloudinary database. Due to time constraints this is pending development.
 
