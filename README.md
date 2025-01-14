@@ -78,7 +78,7 @@ There is also the need to assist people who may require assistance with English,
 
   ![Image of quotes pages on mobile device ](image-2.png)
 
-  
+![alt text](image-5.png)
 ### Accessibility Considerations
  
 In order to make the design accessible for all users, large jumbotron from bootstrap is used with a calming image.
