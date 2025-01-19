@@ -40,6 +40,7 @@
 </style>
 
 <body>
+    {% if user.is_authenticated %}
     <h2 style="text-align:center"> Videos created {{video.user}} </h2>
     <table align="center" style="margin: 0px auto;">
         <thead>
@@ -79,5 +80,6 @@
     <p>
         <a href="{% url 'home' %}"><-- Go To Home Page</a>
     </p>
+    {% endif %}
 </body>
 {% endblock %}

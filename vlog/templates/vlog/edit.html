@@ -61,6 +61,7 @@
 </head>
 
 <body>
+    {% if user.is_authenticated %}
     <div class="container">
         <div class="card">
             <h2 style="text-align:center"> Update Video File </h2>
@@ -92,6 +93,7 @@
             </form>
         </div>
     </div>
+    {% endif %}
 </body>
 
 </html>
