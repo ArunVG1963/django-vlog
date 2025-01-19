@@ -33,6 +33,7 @@ urlpatterns = [
     path('edit/<str:pk>/',views_vlog.edit_video,name="edit_video"),
     path('delete/<str:pk>/',views_vlog.remove_video,name="remove_video"),
      path("accounts/", include("allauth.urls")),
+     path('getinvolved/',views_vlog.get_involved,name="get_involved"),
 
 ]
 

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+<style>
+.card {
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 40%;
+    border-radius: 5px;
+    background-color: #d7d7d7;
+    background-image: linear-gradient(147deg, #d7d7d7 0%, #353535 74%);
+
+ }
+
+ .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+ }
+</style>
+{% block content %}
+
+ <!-- Quotes 1 to 5 -->
+ <div class="col-md-4 ">
+    <div class="card mb-4 shadow-sm consistent-background consistent-paper">
+        <div class="card-body">
+            <h3 class="card-title quotes text-center">Quotes for you</h3>
+
+            <p class="card-text" id="card-text">
+                <ul class="quotes">
+                    <li>“Your mental health is just as important as your physical health.”
+                    </li>
+                    <hr>
+                    <li>“It’s okay not to be okay.”</li>
+                    <hr>
+                    <li>“You are not your mental illness.”</li>
+                    <hr>
+                    <li>“Your struggles do not define you.”</li>
+                    <hr>
+                    <li>“Taking care of your mental health is an act of self-love.”</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+</div>
+<!-- Quotes 6 to 10-->
+<div class="col-md-4">
+    <div class="card mb-4 shadow-sm consistent-background consistent-paper">
+        <div class="card-body">
+            <p class="card-text" id="card-text">
+                <ul class="quotes">
+                    <li>“You are worthy of happiness and peace of mind.”</li>
+                    <hr>
+                    <li>“There is no shame in seeking help for your mental health.”</li>
+                    <hr>
+                    <li>“It’s okay to take a break and prioritize your mental health.”</li>
+                    <hr>
+                    <li>“You are not alone in your struggles.”</li>
+                    <hr>
+                    <li>“It’s okay to ask for support when you need it.”</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -95,3 +95,6 @@ def remove_video(request, pk):
     }
 
    return render(request, 'vlog/delete.html', context)
+
+def get_involved(request):
+   return render(request,'vlog/getinvolved.html') 
