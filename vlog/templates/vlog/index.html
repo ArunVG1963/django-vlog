@@ -16,7 +16,7 @@
     type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
     type="text/css" />
-  <link rel="stylesheet" href="{static/css/style.css}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
 
 </head>
 
@@ -27,7 +27,7 @@
     <!-- Jumbotron act as a guide to let user know mental health matters -->
     <div class="jumbotron text-center consistent-background consistent-image white-text">
       <!-- Mental Health Matters with link to pdf from Birmingham City Council Webinar -->
-      <h1 class="display-4"><img id="logo" src="assets/images/istockphoto-1405835109-612x612.jpg"> Mental Health
+      <h1 class="display-4"><img id="logo" src="{% static 'images/header.jpg' %}" class="card img"> Mental Health
         Matters</h1>
       <p class="lead">Raising awareness and providing resources for mental well-being</p>
       <a class="btn btn-primary btn-lg" href="assets/pdf/Mental_Health___community_champions__AF_.pdf" target="_blank"

@@ -4,8 +4,10 @@
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
 {% if user.is_authenticated %}
-<p class="text-end m-3">You are logged in as {{ user }}</p>
-{% endif %}
+    <p class="text-end m-3">You are logged in as {{ user }}</p>
+    {% else %}
+    <p class="text-end m-3">You are not logged in</p>
+    {% endif %}
 <!DOCTYPE html>
 <html class="h-100" lang="en">
 
