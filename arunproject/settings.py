@@ -29,14 +29,14 @@ SECRET_KEY = 'django-insecure-n0b7dzpxuibqme191+ou0b8g%itbcf4rypdi-9w*8n2((pr7gx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG")
 
-ALLOWED_HOSTS = ['8000-arunvg1963-djangovlog-tu7wpwlagwc.ws.codeinstitute-ide.net','.herokuapp.com','127.0.0.1',]
+ALLOWED_HOSTS = ['8000-arunvg1963-djangovlog-tu7wpwlagwc.ws.codeinstitute-ide.net','.herokuapp.com','127.0.0.1','localhost',]
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net/",
     "https://*.herokuapp.com",
      
 ]
 SECRET_KEY = os.environ.get("SECRET_KEY")
-
+CLOUDINARY_URL = os.environ.get("CLOUDINARY_URL")
 # Application definition
 
 INSTALLED_APPS = [

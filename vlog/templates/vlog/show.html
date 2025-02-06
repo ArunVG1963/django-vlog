@@ -20,12 +20,14 @@
         padding: 20px;
         margin-left: auto;
         margin-right: auto;
+        background-color: #0e0d0d;
     }
 
     th,
     td {
         padding: 5px;
         border: 1px solid;
+        color:aquamarine
     }
 
     body {
@@ -61,11 +63,11 @@
                 <td>{{video.created_at}}</td>
                 <td>{{video.video_file}}</td>
                 <td>
-                    <a href="{% url 'edit_video' video.pk %}">Update</a>
+                    <a href="{% url 'edit_video' video.pk %}"><i class="fa-solid fa-pen"></i>Update</a>
                 </td>
                 
                 <td>
-                    <a href="{% url 'remove_video' video.pk %}">Delete</a>
+                    <a href="{% url 'remove_video' video.pk %}"><i class="fa fa-video-slash"></i> Delete</a>
                 </td>
             </tr>
             {% endfor %}
@@ -78,7 +80,7 @@
     </div>
 
     <p>
-        <a href="{% url 'home' %}"><-- Go To Home Page</a>
+        <a class="xx-large" href="{% url 'home' %}"><-- Go To Home Page</a>
     </p>
     {% endif %}
 </body>
