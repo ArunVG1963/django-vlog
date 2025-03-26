@@ -123,11 +123,142 @@ W3C html validation was undertaken on index.html, show.html, and edit.html and d
 
 Warnings but no errors detected.
 W3C CSS validation was undertaken with iterative correction of typos and properties for fonts that do not exist removed.
+The screens for validation process for the project is a reflective experience with some code that could not be tested.
+
+# The testing process
+
+Improvements and Explanations:
+
+Django Test Structure:
+
+Uses TestCase and Client for effective Django testing.
+Demonstrates testing views (GET, POST), template rendering, and model methods.
+
+Uses reverse() to get URLs, making tests robust against URL changes.
+Shows examples of assertContains, assertTemplateUsed, and how to check status codes.
+
+Added a test for model methods.
+
+Python Test Structure:
+Uses unittest.TestCase for standard Python unit tests.
+Demonstrates testing functions, exceptions, and class methods.
+Added a test for mocking external dependencies, using unittest.mock.patch.
+
+Clearer Comments:
+Added more descriptive docstrings to explain each test's purpose.
+Included placeholders and comments to guide you in replacing them with your specific code.
+
+
+Running the Tests:
+
+Includes the necessary code to set up the Django environment before running the tests. This is critical for Django tests to work.
+Added a check for if __name__ == '__main__': so that the tests are executed when the file is run directly.
+Dependency Mocking:
+The test_external_dependency_mocking example shows how to use unittest.mock.patch to isolate your code from external dependencies. This is essential for writing robust and predictable unit tests.
+
+import unittest
+from django.test import TestCase, Client
+from django.urls import reverse
+
+# Django Tests (vlog)
+class MyappViewsTestCase(TestCase):
+    def setUp(self):
+        self.client = Client()
+
+    def test_index_view(self):
+        """
+        Test the index view.
+        """
+        response = self.client.get(reverse('myapp:index')) # Replace 'myapp:index' with your actual URL name
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Hello, world!")  # Replace with expected content
+
+    def test_detail_view(self):
+        """
+        Test the detail view.
+        """
+        # Create a test object (e.g., a model instance) if needed for the detail view
+        # ...
+        response = self.client.get(reverse('myapp:detail', args=[1])) # Replace 'myapp:detail' and [1] with your actual URL name and arguments
+        self.assertEqual(response.status_code, 200)
+        # Add assertions to check the content of the detail view
+
+    def test_post_view(self):
+        """
+        Test a view that handles POST requests.
+        """
+        data = {'key': 'value'} # Replace with your POST data
+        response = self.client.post(reverse('myapp:post_view'), data) # Replace 'myapp:post_view' with your actual URL name
+        self.assertEqual(response.status_code, 200) # or 302 for redirects
+        # Add assertions to check the response or database changes
+
+    def test_template_rendering(self):
+        """
+        Test if the template is rendered correctly.
+        """
+        response = self.client.get(reverse('myapp:template_view')) # Replace 'myapp:template_view'
+        self.assertTemplateUsed(response, 'myapp/template.html') # Replace 'myapp/template.html'
+        # Add assertions about context variables passed to the template.
+
+    def test_model_methods(self):
+        """
+        Test methods of your Django models.
+        """
+        from vlog.models import MyModel # Replace MyModel
+
+        instance = MyModel.objects.create(field1='test', field2=123) # Replace with relevant model fields
+        self.assertEqual(instance.some_method(), 'expected_result') # Replace some_method and 'expected_result'
+
+# Python Tests (vlog)
+import my_module
+
+class MyModuleTestCase(unittest.TestCase):
+    def test_function_1(self):
+        """
+        Test function_1 in my_module.
+        """
+        result = my_module.function_1(1, 2) # Replace with your function and arguments
+        self.assertEqual(result, 3) # Replace with the expected result
+
+    def test_function_2_with_exception(self):
+        """
+        Test function_2 that raises an exception.
+        """
+        with self.assertRaises(ValueError): # Replace ValueError with the expected exception
+            my_module.function_2(-1) # Replace function_2 and arguments
+
+    def test_class_method(self):
+        """
+        Test a method of a class in my_module.
+        """
+        obj = my_module.MyClass('test') # Replace MyClass and its arguments
+        self.assertEqual(obj.method_a(), 'test_modified') # Replace method_a and the expected result
+
+    def test_external_dependency_mocking(self):
+      """
+      Test a function which uses an external library, mocking that dependency.
+      """
+      from unittest.mock import patch
+      with patch('my_module.external_library.external_function') as mock_external:
+        mock_external.return_value = 'mocked_result'
+        result = my_module.uses_external_library()
+        self.assertEqual(result, 'mocked_result')
+        mock_external.assert_called_once()
+
+# Running the Tests
+if __name__ == '__main__':
+    import os
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'your_project.settings') # Replace 'your_project.settings'
+    import django
+    django.setup()
+    unittest.main()
+
 
 ## Deployment
 
 ### Deployment Process
-Deployment to Heroku is pending
+The project is deployed to heroku.com
+
 
 
 ## Reflection on Development Process
